@@ -1,31 +1,38 @@
 #include <stdio.h>
-#include <stdlib.h>
- 
-#define MAX 10
- 
-// Protótipo da função de ordenação
+#include <time.h>
+#define CLOCKS_PER_SEC
+
 void quick_sort(int *a, int left, int right);
  
 int main(int argc, char** argv)
 {
  int i, vet[MAX];
+ clock_t inicio, fim;
+ float tempo_final;
+ int vetor[];
  
  // Lê MAX ou 10 valores
  for(i = 0; i < MAX; i++)
  {
-  printf("Digite um valor: ");
+  printf("Digite os números que você deseja ordenar separados por espaço: ");
   scanf("%d", &vet[i]);
  }
  
  // Ordena os valores
  quick_sort(vet, 0, MAX - 1);
  
- // Imprime os valores ordenados
  printf("Valores ordenados\n");
  for(i = 0; i < MAX; i++)
  {
   printf("%d\n", vet[i]);
  }
+
+ inicio = clock();
+ quick_sort();
+ fim = clock();
+ tempo_final = fim - inicio;
+ printf(tempo_final/CLOCKS_PER_SEC);
+ 
  system("pause");
  return 0;
 }
