@@ -1,3 +1,8 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#define CLOCKS_PER_SEC
+
 void insertion_sort(int vetor[], int tamanhoVetor) {
 
 int escolhido, j;
