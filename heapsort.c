@@ -39,7 +39,7 @@ int main (void){
     printf("Digite os números que iram ser ordenados com um espaço separando cada um deles: ");
     scanf("%d", &vetor[]);
     inicio = clock();
-    bubbleSort();
+    heapsort();
     fim = clock();
     tempo_final = fim - inicio;
     printf(tempo_final/CLOCKS_PER_SEC);
